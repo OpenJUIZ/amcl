@@ -1,7 +1,3 @@
-
-
-set(src_test_misc test_misc.cpp)
-
-
-
-add_executable(test_misc ${src_test_misc})
+add_executable(localization_test localization_test.cpp)
+target_link_libraries(localization_test PRIVATE amcl::amcl)
+add_test(NAME localization_test COMMAND localization_test)
